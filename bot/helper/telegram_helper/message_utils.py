@@ -109,9 +109,9 @@ def sendStatusMessage(msg, bot):
     free = get_readable_file_size(free)
     currentTime = get_readable_time(time.time() - botStartTime)
     progress = get_readable_message()
-    progress += f"<b>CPU:</b> {psutil.cpu_percent()}%" \
-           f" <b>RAM:</b> {psutil.virtual_memory().percent}%" \
-           f" <b>DISK:</b> {psutil.disk_usage('/').percent}%"
+    progress += f"<b>💻CPU:</b> {psutil.cpu_percent()}%" \
+           f" <b>🧾RAM:</b> {psutil.virtual_memory().percent}%" \
+           f" <b>💽DISK:</b> {psutil.disk_usage('/').percent}%"
     with download_dict_lock:
         dlspeed_bytes = 0
         uldl_bytes = 0
